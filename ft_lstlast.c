@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/19 08:48:56 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/19 09:17:38 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+#include "libft.h"
+
+t_list *ft_lstlast(t_list *lst)
 {
-	unsigned char	*g;
-	size_t	i;
+	t_list *g;
 
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
-	i = 0;
-	while (i < n)
-	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
-		i++;
+	while(lst)
+	{	
+		g = lst;
+		lst = lst->next;
 	}
-	return (NULL);
+	return (g);
 }
 
 // int main()
 // {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
+// 	t_list *lst=ft_lstnew("test");
+// 	t_list *l=ft_lstnew("aicha");
+// 	t_list *t= ft_lstnew("QR");
+// 	ft_lstadd_front(&lst, l);
+// 	ft_lstadd_front(&l,t);
+	
+// 	//ft_lstadd_front(&lst, t);
+// 	//printf("%d",ft_lstsize(t));
+// 	printf("%s",ft_lstlast(t)->content);
 // }

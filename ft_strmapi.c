@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/18 11:52:34 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/18 18:28:46 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char f(unsigned int a, char b)
 {
-	unsigned char	*g;
-	size_t	i;
+	a = 1;
+	return (ft_toupper(b));
+}
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*mapi;
+	unsigned int		i;
 
 	if (!s)
 		return (NULL);
-	g = (unsigned char *) s;
 	i = 0;
-	while (i < n)
+	mapi = malloc(ft_strlen(s));
+	if (!mapi)
+		return (NULL);
+	while (s[i])
 	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
+		mapi[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	mapi[i] = '\0';
+	return (mapi);
 }
 
-// int main()
-// {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
-// }
+int main ()
+{
+	printf ("%s", ft_strmapi("aicha",f));
+}

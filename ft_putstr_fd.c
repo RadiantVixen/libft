@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/18 21:04:14 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/18 21:31:12 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include"libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	*g;
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	return (NULL);
 }
-
-// int main()
-// {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
-// }

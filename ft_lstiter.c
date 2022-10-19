@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 02:46:57 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/17 04:21:17 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/19 11:33:13 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/19 11:40:35 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	unsigned char	*s11;
-	unsigned char	*s22;
+// void	f(void *d)
+// {
+// 	ft_bzero(d, 5);
+// }
 
-	if (!s1 || !s2)
-		return (0);
-	s11 = (unsigned char *)s1;
-	s22 = (unsigned char *)s2;
-	while (s11 && s22 && n)
+void ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst)
 	{
-		if (*s11 != *s22)
-			return (*s11 - *s22);
-		s11 ++;
-		s22 ++;
-		n --;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (0);
 }
 
 // int main()
 // {
-//       char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%d",ft_memcmp(dst,src,0));
-//       printf("\n%d",memcmp(dst,src,0));
+// 	int i = 0;
+	
+// 	t_list *lst = ft_lstnew(ft_strdup("Hello"));
+// 	lst->next = ft_lstnew(ft_strdup("WorldLL"));
+// 	lst->next->next = ft_lstnew(ft_strdup("!!!!"));
+// 	ft_lstiter(lst,f);
+// 	while (lst)
+// 	{
+// 		printf("%s\n", lst->content);
+// 		lst = lst->next;
+// 	}
 // }

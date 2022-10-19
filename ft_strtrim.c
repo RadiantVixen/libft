@@ -1,39 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/17 18:02:18 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/17 20:07:42 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	harf(char const *s, char c)
 {
-	unsigned char	*g;
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
+		if (s[i] == c)
+			return (1);
 		i++;
 	}
-	return (NULL);
+	return (0);
+}
+char *ft_strtrim(char const *s1, char const *set)
+{
+	char	*trim;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	trim = malloc (ft_strlen(s1));
+	if (!trim)
+		return (NULL);
+	while (s1[i])
+	{
+		if ((harf(set, s1[i])))
+			i++;
+		else
+		{
+			trim[j] = s1[i];
+			i++;
+			j++;
+		}
+	}
+	trim[j] = '\0';
+	return (trim);
 }
 
-// int main()
-// {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
-// }

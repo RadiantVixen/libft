@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:20:02 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/15 00:52:12 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/17 01:53:59 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t l)
 
 // int main()
 // {
-//       char src[] = "lkj";
+//       char src[] = "";
 //       char dst[20] = "salam";
-//       char src1[] = "lkj";
+//       char src1[] = "";
 //       char dst1[20] = "salam";
-//       printf("%zu\n",ft_strlcat(dst,src,3));
-//       printf("%zu\n",strlcat(dst1,src1,3));
+//       printf("%zu\n",ft_strlcat(dst,src,6));
+//       printf("%zu\n",strlcat(dst1,src1,6));
 // }

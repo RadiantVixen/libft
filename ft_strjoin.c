@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/18 07:38:13 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/18 16:11:51 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include"libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*g;
-	size_t	i;
+	char	*join;
+	int		i;
 
-	if (!s)
+	if (!s1 && !s2)
+		return (ft_calloc(1, 1));
+	i = -1;
+	join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!join)
 		return (NULL);
-	g = (unsigned char *) s;
-	i = 0;
-	while (i < n)
-	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
-		i++;
-	}
-	return (NULL);
+	while (s1[++i])
+		join[i] = s1[i];
+		i = -1;
+	while (s2[++i])
+		join[ft_strlen(s1) + i] = s2[i];
+	join[ft_strlen(s1) + i] = '\0';
+	return (join);
 }
 
 // int main()
 // {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
+// 	printf("%s",ft_strjoin("aicha","atki"));
 // }

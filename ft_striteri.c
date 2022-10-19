@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/18 17:51:35 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/18 19:04:00 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include  "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+// void	f(unsigned int a, char* b)
+// {
+// 	a = 0;
+// 	b = ft_strchr(b,'i');
+// 	printf("%s\n", b);
+// }
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*g;
-	size_t	i;
+	unsigned int		i;
 
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
 	i = 0;
-	while (i < n)
-	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
-		i++;
-	}
-	return (NULL);
+	if (s)
+		f(i, s);
 }
 
-// int main()
+// int main ()
 // {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
+// 	char s[] = "aicha";
+// 	ft_striteri(s, f);
+// 	printf("%s",s);
 // }
+	

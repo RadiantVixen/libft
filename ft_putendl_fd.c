@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 18:22:11 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 16:07:01 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/18 21:09:58 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/18 21:33:17 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include"libft.h"
 
-int	ft_isalnum(int c)
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		|| (c >= '1' && c <= '9'));
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%d",ft_isalum('+'));
-}
-*/
+
+// int	main()
+// {
+// 	int fd = open("fd.txt", O_RDWR, 0777);
+// 	ft_putendl_fd("done!", fd);
+// 	return (0);
+// }

@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/17 02:48:07 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/17 04:11:32 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*g;
+	char	*sub;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
+	if (s == 0)
+		return (0);
+	if (start >= (unsigned int) ft_strlen(s))
+		return (ft_calloc(1, 1));
 	i = 0;
-	while (i < n)
+	while (s[start + i] && i < len)
+		i++;
+	sub = (char *)malloc (sizeof(char) * (i + 1));
+	if (!sub)
+		return (NULL);
+	i = 0;
+	while (s[i + start] && i < len)
 	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
+		sub[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	sub[i] = 0;
+	return (sub);
 }
-
-// int main()
-// {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
-// }

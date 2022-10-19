@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/19 09:03:20 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/19 09:25:34 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned char	*g;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
-	i = 0;
-	while (i < n)
+	while((*lst)->next)
 	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
-		i++;
+		(*lst)->next = (*lst)->next->next;
 	}
-	return (NULL);
+	(*lst)->next = new;
 }
 
 // int main()
 // {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
+// 	t_list *lst=ft_lstnew("test");
+// 	t_list *l=ft_lstnew("aicha");
+// 	t_list *t= ft_lstnew("QR");
+// 	t_list *r= ft_lstnew("blabla");
+// 	ft_lstadd_front(&lst, l);
+// 	ft_lstadd_front(&l,t);
+// 	ft_lstadd_back(&t,r);
+// 	printf("%s",ft_lstlast(t)->content);
 // }

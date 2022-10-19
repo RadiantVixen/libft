@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:13:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/19 07:53:50 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/19 10:19:42 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list *ft_lstnew(void *content)
 {
-	unsigned char	*g;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	g = (unsigned char *) s;
-	i = 0;
-	while (i < n)
-	{
-		if (g[i] == (unsigned char)c)
-			return (g + i);
-		i++;
-	}
-	return (NULL);
+	t_list	*l;
+	
+	l = malloc (sizeof(t_list));
+	l->content = content;
+	l->next = NULL;
+	return (l);
 }
 
 // int main()
 // {
-//       //char src[] = "aicha";
-//       char dst[15] = "abcd";
-//       printf("%s",ft_memchr(dst,'c',3));
-//       printf("\n%s",memchr(dst,'c',3));
+// 	char *p="aicha";
+// 	printf("%s",ft_lstnew(p)->content);
 // }
