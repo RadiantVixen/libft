@@ -5,75 +5,80 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 14:34:53 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 15:03:28 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/17 18:02:18 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/21 18:30:27 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*clear1(char  *s1, char *set)
-{
-	int	i;
-	int	j;
-
-	i = ft_strlen(s1);
-	j = 0;
-	if (!s1)
-		return (NULL);
-	while (i > 0)
-	{
-		while (set[j])
-		{
-			while (s1[i] == set[j])
-			{
-				i++;
-				j++;
-			}
-			s1[i] ='\0';
-			return (s1);
-		}
-		j = 0;
-	}
-}
-char	*clear(char *s1, char *set)
+int	harf(char const *s, char c)
 {
 	int	i;
 
 	i = 0;
-	s1 = clear1(*s1, set);
-	if (!s1)
-		return (NULL);
-	while (s1)
+	while (s[i])
 	{
-		while(set[i])
-		{
-			while (set [i] == *s1)
-			{
-				i++;
-				s1++;
-			}
-			return (s1);
-		}
-		i = 0;
+		if (s[i] == c)
+			return (1);
+		i++;
 	}
+	return (0);
+}
+
+int	reservation(char const *s1, char const *set)
+{
+	int	i;
+	int	j;
+	int	cmpt;
+
+	i = 0;
+	cmpt = 0;
+	j = 0;
+	while (s1[i])
+	{
+		while (set[j])
+		{
+			if (s1[i] == set[j])
+				cmpt++;
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return (cmpt);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
+	int		i;
+	int		j;
 
-	trim = malloc (strlen(s1));
-	if (!s1)
+	i = 0;
+	j = 0;
+	trim = malloc (ft_strlen(s1) - reservation(s1, set) + 1);
+	if (!trim)
 		return (NULL);
-	trim = clear((const char)s1, (const char)set);
+	while (s1[i])
+	{
+		if ((harf(set, s1[i])))
+			i++;
+		else
+		{
+			trim[j] = s1[i];
+			i++;
+			j++;
+		}
+	}
+	trim[j] = '\0';
 	return (trim);
 }
 
-int main ()
-{
-        //char * s = ft_strtrim("   xxxtripouille", " x");
-        char * s = ft_strtrim("   xxxtripxxxxouille   xxx", " x");
-        printf("%s",s);
-        printf("\n%zu",ft_strlen(s));
-}
+// int main ()
+// {
+// 	//char * s = ft_strtrim("   xxxtripouille", " x");
+// 	char * s = ft_strtrim("   xxxtripxxxxouille   xxx", " x");
+// 	printf("%s",s);
+// 	printf("\n%zu",ft_strlen(s));
+// }
