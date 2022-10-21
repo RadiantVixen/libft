@@ -6,16 +6,16 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 07:53:50 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/19 10:19:42 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:34:11 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*l;
-	
+
 	l = malloc (sizeof(t_list));
 	l->content = content;
 	l->next = NULL;

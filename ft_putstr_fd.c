@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 21:04:14 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 21:31:12 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:37:28 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 

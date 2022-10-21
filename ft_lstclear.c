@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:44:16 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/19 12:15:05 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:30:53 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,18 @@ void	del(void *p)
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
-	
+
 	while (*lst)
 	{
 		tmp = *lst;
-		*lst = (*lst) ->next;
-		ft_lstdelone(tmp,del);
-		free (*lst);
+		*lst = (*lst)->next;
+		ft_lstdelone(tmp, del);
 	}
 }
 
 // int main()
 // {
 // 	int i = 0;
-	
 // 	t_list *lst = ft_lstnew(ft_strdup("Hello"));
 // 	lst->next = ft_lstnew(ft_strdup("WorldLL"));
 // 	lst->next->next = ft_lstnew(ft_strdup("!!!!"));

@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:33:35 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/19 08:51:05 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:34:27 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

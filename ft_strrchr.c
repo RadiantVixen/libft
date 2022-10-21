@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:23:49 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/15 00:50:14 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/20 19:34:08 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ char	*ft_strrchr(char *s, int c)
 
 	h = (char)c;
 	i = ft_strlen(s);
-	while (i--)
+	while (i >= 0)
 	{
-		if (s[i] == h)
-			return (&s[i]);
+		if (s[i] == (unsigned char)h)
+			return (s + i);
+		i--;
 	}
 	return (NULL);
 }
 
 // int main()
 // {
-// 	char y[]="";
-// 	printf("%s\n",ft_strrchr(y, 100));
+// 	char y[]="gfgghghghh";
+// 	printf("%s\n",ft_strrchr(y, 'f'));
 // 	return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:33:13 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/19 11:40:35 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:31:18 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // 	ft_bzero(d, 5);
 // }
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
@@ -29,7 +29,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 // int main()
 // {
 // 	int i = 0;
-	
 // 	t_list *lst = ft_lstnew(ft_strdup("Hello"));
 // 	lst->next = ft_lstnew(ft_strdup("WorldLL"));
 // 	lst->next->next = ft_lstnew(ft_strdup("!!!!"));

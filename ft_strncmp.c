@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:40:31 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/15 00:16:06 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/20 19:39:15 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] && s2[i] && n && s1[i] == s2[i])
-	{
+	while (s1[i] && s2[i] && i < n - 1 && s1[i] == s2[i])
 		i++;
-		n--;
-	}
 	if (s1[i] < s2[i])
 		return (-1);
 	else if (s1[i] > s2[i])

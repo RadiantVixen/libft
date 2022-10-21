@@ -6,12 +6,11 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 21:09:58 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 21:33:17 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:36:00 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -21,7 +20,8 @@ void	ft_putendl_fd(char *s, int fd)
 
 // int	main()
 // {
-// 	int fd = open("fd.txt", O_RDWR, 0777);
+// 	int fd = open("fd.txt",O_CREAT, O_RDWR,777);
 // 	ft_putendl_fd("done!", fd);
+// 	printf("%d",fd);
 // 	return (0);
 // }

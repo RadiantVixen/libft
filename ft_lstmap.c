@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:49:36 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/19 12:13:21 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:33:08 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*f(void *p)
 {
-	return (ft_memmove(p+2,p,1));
+	return (ft_memmove(p + 2, p, 1));
 }
 
 void	del(void *p)
@@ -37,22 +37,21 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstdelone(lst, del);
 		}
 		lst = lst->next;
-		t= t->next;
+		t = t->next;
 	}
 	return (t);
 }
 
-int main()
-{
-	int i = 0;
-	
-	t_list *lst = ft_lstnew(ft_strdup("Hello"));
-	lst->next = ft_lstnew(ft_strdup("WorldLL"));
-	lst->next->next = ft_lstnew(ft_strdup("!!!!"));
-	t_list *tmp = ft_lstmap(lst,f,del);
-	while (tmp)
-	{
-		printf("%s\n", tmp->content);
-		tmp = tmp->next;
-	}
-}
+// int main()
+// {
+// 	int i = 0;
+// 	t_list *lst = ft_lstnew(ft_strdup("Hello"));
+// 	lst->next = ft_lstnew(ft_strdup("WorldLL"));
+// 	lst->next->next = ft_lstnew(ft_strdup("!!!!"));
+// 	t_list *tmp = ft_lstmap(lst,f,del);
+// 	while (tmp)
+// 	{
+// 		printf("%s\n", tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// }

@@ -1,14 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: aatki <aatki@student.42.fr>                +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/15 19:39:10 by aatki             #+#    #+#              #
-#    Updated: 2022/10/19 11:32:42 by aatki            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 NAME = libft.a
 
@@ -45,13 +34,15 @@ SRC =ft_atoi.c\
 	ft_putchar_fd.c\
 	ft_putstr_fd.c\
 	ft_putendl_fd.c\
+	ft_putnbr_fd.c\
 	ft_lstnew.c\
 	ft_lstadd_front.c\
 	ft_lstsize.c\
 	ft_lstlast.c\
 	ft_lstdelone.c\
 	ft_lstclear.c\
-	ft_lstiter.c
+	ft_lstiter.c\
+	ft_lstadd_back.c
 	
 CFLAGS = -Wall -Werror -Wextra
 
@@ -59,13 +50,14 @@ CC = cc
 
 OBJ = $(SRC:.c=.o)
 
-all:$(NAME)
+all: $(NAME)
 
 $(NAME):  $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
 $(OBJ): $(SRC)
-		$(CC) $(CFLAGS) -I ./ -c $(SRC)
+		$(CC) $(CFLAGS) -c $(SRC)
+bonus:all
 
 clean:
 	rm -f $(OBJ)

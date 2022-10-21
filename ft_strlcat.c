@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:20:02 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/17 01:53:59 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/21 11:42:14 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t l)
 {
-	size_t	len;
-	size_t	i;
+	size_t	lens;
+	size_t	lend;
 	size_t	j;
+	int		a;
 
 	j = 0;
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	while (dst[i])
-		i++;
-	if (l == 0 || l <= i)
-		return (l + len);
-	while (src[j] && j < l)
+	lend = ft_strlen(dst);
+	a = lend;
+	lens = ft_strlen(src);
+	if (l <= lend)
+		return (l + lens);
+	while (src[j] && lend < (l - 1))
 	{
-		dst[i + j] = src[j];
+		dst[lend] = src[j];
+		lend++;
 		j++;
 	}
-	dst[i + j] = '\0';
-	return (i + len);
+	dst[lend] = '\0';
+	return (a + lens);
 }
 
 // int main()

@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:25:39 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/16 23:22:39 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/20 19:05:05 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ int	ft_atoi(const char *str)
 // #include <limits.h>
 // int main()
 // {
-// 	printf("%d\n%d",ft_atoi("555a2"),atoi("555a2"));
+// 	printf("%d\n%d",ft_atoi("+ 2147483648"),atoi("+ 2147483648"));
 // }
