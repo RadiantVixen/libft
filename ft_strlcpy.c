@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:00:52 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/20 19:15:51 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:20:31 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t l)
 	}
 	return (len);
 }
-// int main()
-// {
-//       const char src[] = "    ";
-//       char dst[15] = "";
-//       printf("%lu  %s",ft_strlcpy(dst, src ,2),dst);
-// 	  char dst1[15] = "";
-//       printf("\n%lu  %s",strlcpy(dst1, src,2),dst1);
-// }

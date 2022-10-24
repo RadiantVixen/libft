@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 06:20:55 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/18 10:56:15 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:44:12 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	s = (unsigned char *)dst;
 	c = (unsigned char *)src;
-	if (!dst || !src)
-		return (NULL);
 	if (src < dst)
 	{
 		while (len--)

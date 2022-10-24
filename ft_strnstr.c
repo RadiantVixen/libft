@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:30:51 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:44:45 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:21:19 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	 char haystack[30] = "aaabcabcd";
-// 	// char needle[10] = "aabc";
-// 	//char * empty = (char*)"";
-// 	printf("%s", ft_strnstr(haystack, "abcd", 9));
-// 	printf("\n%s", strnstr(haystack, "abcd", 9));
-// }

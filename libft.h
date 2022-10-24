@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:25:16 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 18:36:33 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/22 17:58:14 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ int		ft_isprint(int c);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-char	*ft_strrchr(char *s, int c);
-char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t count, size_t size);
 size_t	ft_strlen(char const *c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);

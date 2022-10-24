@@ -1,3 +1,14 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aatki <aatki@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/23 21:13:19 by aatki             #+#    #+#              #
+#    Updated: 2022/10/24 12:21:51 by aatki            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME = libft.a
 
@@ -44,26 +55,26 @@ SRC =ft_atoi.c\
 	ft_lstiter.c\
 	ft_lstadd_back.c\
 	ft_lstmap.c
-	
-CFLAGS = -Wall -Werror -Wextra
+
+CFLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
-OBJ = $(SRC:.c=.o)
+OBJS = ${SRC:.c=.o}
 
-all: $(NAME)
+all : ${NAME}
 
-$(NAME):  $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+${NAME} : ${OBJS}
+	ar -rcs ${NAME} ${OBJS}
+	
+${OBJS} : ${SRC}
+	${CC} ${CFLAGS}  -c ${SRC}
+clean :
+	rm -f ${OBJS}
 
-$(OBJ): $(SRC)
-		$(CC) $(CFLAGS) -c $(SRC)
-bonus:all
+fclean : clean
+	rm -f ${NAME}
 
-clean:
-	rm -f $(OBJ)
+re : fclean all
 
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all
+.PHONY : all clean fclean re

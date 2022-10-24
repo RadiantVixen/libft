@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:52:34 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:51:34 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:45:34 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	i = 0;
-	mapi = malloc(ft_strlen(s));
+	mapi = malloc(ft_strlen(s) + 1);
 	if (!mapi)
 		return (NULL);
 	while (s[i])

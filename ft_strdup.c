@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:39:32 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/14 23:49:31 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/22 17:55:51 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*depliquer;
 	int		len;

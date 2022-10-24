@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 21:12:21 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 12:20:15 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 21:10:15 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putstr_fd(s, fd);
 	free(s);
 }
-
-// int	main()
-// {
-// 	int fd = open("fd1.txt", O_RDWR, 0777);
-// 	ft_putnbr_fd(1256, fd);
-// 	write (2,'c',1);
-// 	return (0);
-// }

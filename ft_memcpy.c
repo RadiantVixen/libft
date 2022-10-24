@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:53:09 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 10:02:08 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 19:24:20 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
 
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	while (i < n)

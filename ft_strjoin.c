@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 07:38:13 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:40:49 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:06:41 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[ft_strlen(s1) + i] = '\0';
 	return (join);
 }
-
-// int main()
-// {
-// 	char	*p,*t = NULL;
-// 	// printf("%s %s\n",ft_strjoin(p,t), strjoin(p,t));
-// }

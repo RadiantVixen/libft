@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 07:53:50 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:34:11 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:44:20 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,9 @@ t_list	*ft_lstnew(void *content)
 	t_list	*l;
 
 	l = malloc (sizeof(t_list));
+	if (!l)
+		return (NULL);
 	l->content = content;
 	l->next = NULL;
 	return (l);
 }
-
-// int main()
-// {
-// 	char *p="aicha";
-// 	printf("%s",ft_lstnew(p)->content);
-// }

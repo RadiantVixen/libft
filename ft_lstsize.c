@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:33:35 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:34:27 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:05:38 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-// int main()
-// {
-// 	t_list *l=ft_lstnew("aicha");
-// 	t_list *lst=ft_lstnew("test");
-// 	ft_lstadd_front(&lst, l);
-// 	//ft_lstadd_front(&lst, l);
-// 	printf("%s\n",l->next->content);
-// 	printf("%d",ft_lstsize(l));
-// }

@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:29:53 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:31:10 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:05:07 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
-
-// int main()
-// {
-	// int i = 0;
-	// t_list *lst = ft_lstnew(ft_strdup("Hello"));
-	// lst->next = ft_lstnew(ft_strdup("WorldLkkL"));
-	// ft_lstdelone(lst, &del);
-	// while (lst)
-	// {
-	// 	printf("%s\n", lst->content);
-	// 	lst= lst->next;
-	// }
-// }

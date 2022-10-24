@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:20:02 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 11:42:14 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 16:06:46 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t l)
 	dst[lend] = '\0';
 	return (a + lens);
 }
-
-// int main()
-// {
-//       char src[] = "";
-//       char dst[20] = "salam";
-//       char src1[] = "";
-//       char dst1[20] = "salam";
-//       printf("%zu\n",ft_strlcat(dst,src,6));
-//       printf("%zu\n",strlcat(dst1,src1,6));
-// }

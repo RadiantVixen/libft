@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 08:02:10 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/20 17:50:50 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 20:40:52 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_itoa(int n)
 	return (itoa);
 }
 
-// int	main(void)
+// int main ()
 // {
-// 	printf("%s", ft_itoa(-2147483648));
+// 	printf("%s",ft_itoa());
 // }

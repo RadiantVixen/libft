@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:10:10 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/17 18:34:09 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:14:21 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	u;
-
-	u = (unsigned char) c;
-	if (u >= 'a' && u <= 'z')
-		u -= 32;
-	return ((int)u);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
-
-// int main(){
-// 	int c='g';
-// 	printf("%c\n",ft_toupper(c));
-// 	printf("%c",toupper(c));
-// 	return 0;
-// }
