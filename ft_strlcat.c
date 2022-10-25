@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:20:02 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/24 14:30:55 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 18:05:18 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t l)
 	size_t	j;
 	int		a;
 
-	if (!dst && l == 0)
+	if (l == 0)
 		return (ft_strlen(src));
 	j = 0;
 	lend = ft_strlen(dst);

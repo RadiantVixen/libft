@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:25:16 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/24 18:01:16 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 18:59:09 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@
 # include <stdio.h>
 # include <strings.h>
 # include <unistd.h>
-# include <fcntl.h>
 
-typedef struct t_list
+typedef struct s_list
 {
 	void			*content;
-	struct t_list	*next;
+	struct s_list	*next;
 }t_list;
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
-int		ft_strcmp(char *s1, char *s2);
 size_t	ft_strlcpy(char *dst, const char *src, size_t l);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t l);

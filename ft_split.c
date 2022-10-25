@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:34:09 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:17 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 19:15:23 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	compt1(char const *s, char c)
+static int	compt1(char const *s, char c)
 {
 	int	i;
 	int	cmpt;
@@ -30,7 +30,7 @@ int	compt1(char const *s, char c)
 	return (cmpt);
 }
 
-int	word(char const *s, char c)
+static int	word(char const *s, char c)
 {
 	int	k;
 
@@ -44,7 +44,7 @@ int	word(char const *s, char c)
 	return (k);
 }
 
-char	**ft_free(char **p, int len)
+static char	**ft_free(char **p, int len)
 {
 	int	i;
 
@@ -56,7 +56,7 @@ char	**ft_free(char **p, int len)
 	return (NULL);
 }
 
-char	*ft_copy(char *s, int lenght)
+static char	*ft_copy(char *s, int lenght)
 {
 	int		i;
 	char	*ptr;

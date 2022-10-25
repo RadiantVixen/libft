@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:02:18 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/25 10:41:50 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 21:49:17 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(const char *set, char c)
+static int	check(const char *set, char c)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	check(const char *set, char c)
 	return (0);
 }
 
-char	*check_front_back(char *s, const char *set)
+static char	*check_front_back(char *s, const char *set)
 {
 	int	j;
 
@@ -56,7 +56,7 @@ char	*ft_strtrim(const char *s, const char *set)
 	char	*s1;
 
 	if (!s)
-		return (NULL);
+		return (ft_calloc(1, 1));
 	if (!set)
 		return ((char *)s);
 	s1 = check_front_back((char *)s, set);

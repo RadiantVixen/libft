@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 08:02:10 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/24 15:28:16 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 22:52:00 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	compteur(long *nb, int *sign)
+static int	compteur(long *nb, int *sign)
 {
 	int		cmpt;
 	long	i;

@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:07:46 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/24 16:14:51 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 21:30:42 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void			*ptr;
 
-	if ((size * count) >= SIZE_MAX)
+	if (!count || !size)
+		return (malloc(0));
+	if (SIZE_MAX / count <= size)
 		return (0);
 	ptr = malloc(count * size);
 	if (!ptr)

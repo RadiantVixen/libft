@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 09:44:16 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/23 16:05:00 by aatki            ###   ########.fr       */
+/*   Created: 2022/10/19 11:33:13 by aatki             #+#    #+#             */
+/*   Updated: 2022/10/25 21:57:12 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	del(void *p)
-{
-	free (p);
-}
+// void	f(void *d)
+// {
+// 	ft_bzero(d, 5);
+// }
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*tmp;
-
-	while (*lst)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		tmp = *lst;
-		*lst = (*lst)->next;
-		ft_lstdelone(tmp, del);
+		f(lst->content);
+		lst = lst->next;
 	}
 }
