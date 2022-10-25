@@ -6,13 +6,13 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:02:18 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/23 17:26:46 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/25 10:41:50 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char *set, char c)
+int	check(const char *set, char c)
 {
 	int	i;
 
@@ -26,28 +26,39 @@ int	check(char *set, char c)
 	return (0);
 }
 
+char	*check_front_back(char *s, const char *set)
+{
+	int	j;
+
+	if (s && set)
+	{
+		while (*s)
+		{
+			if (!check(set, *s))
+				break ;
+			s++;
+		}
+		j = ft_strlen(s) - 1;
+		if (s[0] == '\0')
+			return (ft_calloc(1, 1));
+		while (j >= 0)
+		{
+			if (!check(set, *(s + j)))
+				return (ft_substr((const char *)s, 0, j + 1));
+			j--;
+		}
+	}
+	return (s);
+}
+
 char	*ft_strtrim(const char *s, const char *set)
 {
-	int	i;
-	int	j;
+	char	*s1;
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	j = ft_strlen(s) - 1;
-	while (s[i] && check((char *)set, s[i]))
-		i++;
-	while (j >= 0 && check((char *)set, s[j]))
-		j--;
-	if (j == -1)
-		return (ft_strdup("\0"));
-	return (ft_substr(s, i, (j - i + 1)));
+	if (!set)
+		return ((char *)s);
+	s1 = check_front_back((char *)s, set);
+	return (s1);
 }
-
-// int main ()
-// {
-// 	//char * s = ft_strtrim("   xxxtripouille", " x");
-// 	char * s = ft_strtrim("   xxxtripouille   xxx", " x");
-// 	printf("%s",s);
-// 	//printf("\n%zu",ft_strlen(s));
-// }

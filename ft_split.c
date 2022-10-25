@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:34:09 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/21 12:06:45 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/24 14:27:17 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		p[i] = ft_copy((char *)s, word(s, c));
 		if (!p[i])
-			ft_free(p, len);
+			return (ft_free(p, len));
 		s += word(s, c);
 		i++;
 	}
