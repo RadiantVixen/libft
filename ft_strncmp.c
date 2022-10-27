@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:40:31 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/23 17:21:06 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/27 15:03:13 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	else
 		return (0);
 }
-
-// int main()
-// {
-// 	printf("%d",ft_strncmp("","",1));
-// }

@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 02:19:33 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/23 17:20:24 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/26 18:51:01 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == (unsigned char )c)
+		if (*s == (char )c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == (unsigned char )c)
+	if (*s == (char )c)
 		return ((char *)s);
 	return (NULL);
 }

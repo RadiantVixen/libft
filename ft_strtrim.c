@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:02:18 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/25 21:49:17 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/27 11:33:30 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strtrim(const char *s, const char *set)
 	char	*s1;
 
 	if (!s)
-		return (ft_calloc(1, 1));
+		return (NULL);
 	if (!set)
 		return ((char *)s);
 	s1 = check_front_back((char *)s, set);

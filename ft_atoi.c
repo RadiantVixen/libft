@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:25:39 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/25 19:15:48 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/27 11:46:16 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_max(unsigned long long a, int sign)
 	if (a >= 9223372036854775807 && sign == 1)
 		return (-1);
 	else if (a > 9223372036854775807 && sign == -1)
-		return (0);
+		return (1);
 	return ((int)a * sign);
 }
 

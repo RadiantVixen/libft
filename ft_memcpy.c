@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:53:09 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/25 19:27:26 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/26 18:18:18 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 		i++;
 	}
-	return ((unsigned char *)dst);
+	return (dst);
 }

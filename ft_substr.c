@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 02:48:07 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/17 04:11:32 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/27 12:11:08 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
-	if (s == 0)
+	if (!s)
 		return (0);
 	if (start >= (unsigned int) ft_strlen(s))
 		return (ft_calloc(1, 1));

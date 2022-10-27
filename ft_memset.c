@@ -6,7 +6,7 @@
 /*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 22:56:19 by aatki             #+#    #+#             */
-/*   Updated: 2022/10/25 22:11:57 by aatki            ###   ########.fr       */
+/*   Updated: 2022/10/27 11:53:32 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	x = (unsigned char *) b;
 	while (i < len)
 	{
-		x[i] = c;
+		x[i] = (unsigned char)c;
 		i++;
 	}
 	return ((void *)x);
