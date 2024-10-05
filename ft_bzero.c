@@ -24,3 +24,8 @@ void	ft_bzero(void *o, size_t len)
 		s++;
 	}
 }
+
+
+
+
+
